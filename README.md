@@ -1,4 +1,4 @@
-# Stock Management
+# Controle de Estoque
 
 ## 1. Introdução
 
@@ -40,3 +40,11 @@ Uma empresa está necessitando de um programa que gerencie a entrada e saída de
 ## 5. Diagrama de casos de uso
 
 ![Diagrama-casos-de-uso](Documents/img/diagrama-casos-de-uso.png)
+
+## 6. Diagrama de classes
+
+![Diagrama_de_classes](Documents/img/diagrama_classes.PNG)
+
+## 7. Diagrama de Modelos
+
+![Diagrama_de_modelos](Documents/img/diagrama_modelo.png)
