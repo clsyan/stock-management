@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Acer\Documents\stock-management\Stock\App.xaml
-3410873842
+4-349017155
 
-8-2033483219
+9-668474703
 151791245033
-MainWindow.xaml;UserControlNF.xaml;UserControlRecebimento.xaml;
+MainWindow.xaml;UserControlCadastrar.xaml;UserControlNF.xaml;UserControlRecebimento.xaml;
 
 True
 
