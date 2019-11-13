@@ -7,36 +7,80 @@
              xmlns:local="clr-namespace:Stock"
              mc:Ignorable="d" 
              d:DesignHeight="520" d:DesignWidth="1080">
-    <Grid Background="#dedede">
-        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+    <Grid Background="Snow">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromTop, Duration=0:0:0.4}">
             <StackPanel>
                 <Grid>
-                <Label Content="NOTA FISCAL" FontSize="17" Foreground="Black" HorizontalAlignment="Center"/>
-                <Label Content="Nº" FontSize="17" Foreground="Black" HorizontalAlignment="Right" Margin="0 0 120 10"/>
-                    <TextBox HorizontalAlignment="Right" Width="120" BorderBrush="Black"/>
+                    <Label Content="NOTA FISCAL" FontSize="17" Foreground="Black" HorizontalAlignment="Center" />
+                    <Label Content="Nº" FontSize="12" Foreground="Black" HorizontalAlignment="Right" Margin="0 0 120 10" />
+                    <TextBox HorizontalAlignment="Right" Width="100"  Height="20" Margin="0 0 20 10" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1"/>
                 </Grid>
-                <Grid Height="60" Margin="0 25 0 0">
-                    <Label Content="NOME/RAZÃO SOCIAL" FontSize="12" Foreground="Black"/>
+                <Grid Height="60" Margin="0 25 0 0" Width="1800">
+                    <Label Content="NOME/RAZÃO SOCIAL" FontSize="12" Foreground="Black"  FontFamily="Roboto" Width="auto"/>
                     <TextBox Height=" 15" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
 
-                    <Label Content="ENDEREÇO" FontSize="12" Foreground="Black" Margin="220 0 0 0"/>
+                    <Label Content="CNPJ" FontSize="12" Foreground="Black" Margin="220 0 0 0" Width="auto"/>
                     <TextBox Height=" 15" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
 
-                    <Label Content="ENDEREÇO" FontSize="12" Foreground="Black" Margin="435 0 0 0"/>
+                    <Label Content="ENDEREÇO" FontSize="12" Foreground="Black" Margin="435 0 0 0" Width="Auto"/>
                     <TextBox Height=" 15" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="440 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
+
+                    <Label Content="DATA DE EMISSÃO" FontSize="12" Foreground="Black" Margin="670 -5 0 0" Width="Auto"/>
+                    <DatePicker Width="120" Margin="670,22,1010,12"  Height="26" BorderBrush="#2d2d2d2d" BorderThickness="0 0 0 1"/>
+
+
+                    <Label Content="DATA DE SAÍDA" FontSize="12" Foreground="Black" Margin="820,-5,0,2"/>
+
+                    <DatePicker Width="120" Margin="820,24,860,10"  Height="26" BorderBrush="#2d2d2d2d" BorderThickness="0 0 0 1"/>
 
                 </Grid>
                 <Label Content="DADOS DO REMETENTE" Foreground="Black"/>
-                <Grid Height="60" Margin="0 7 0 0">
+                <Grid Height="60" Margin="0 7 0 0" Width="1700">
                     <Label Content="NOME" FontSize="12" Foreground="Black"/>
                     <TextBox Height=" 15" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
 
                     <Label Content="CPF/CNPJ" FontSize="12" Foreground="Black" Margin="220 0 0 0"/>
                     <TextBox Height=" 15" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
 
-                    <Label Content="NOME/RAZÃO SOCIAL" FontSize="12" Foreground="Black" Margin="435 0 0 0"/>
+                    <Label Content="ENDEREÇO" FontSize="12" Foreground="Black" Margin="435 0 0 0"/>
                     <TextBox Height=" 15" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="440 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
+
+                    <Label Content="CÓD.PRODUTO" FontSize="12" Foreground="Black" Margin="670 0 0 0"/>
+                    <TextBox Height=" 15" Width="90" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="675 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
+
+                    <Label Content="QUANTIDADE" FontSize="12" Foreground="Black" Margin="780 0 0 0"/>
+                    <TextBox Height=" 15" Width="90" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="785 22" BorderBrush="#2d2d2d2d" BorderThickness="1 1 1 1" />
+                    <materialDesign:PackIcon Kind="PlusBox" Foreground="#FFA2A2A2" Width="25" Height="25" HorizontalAlignment="Center" Margin="120 15 10 10"/>
+
                 </Grid>
+                <StackPanel>
+                    <DataGrid Height="170" Background="WhiteSmoke" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="CÒDIGO" Foreground="Black"/>
+                            <DataGridTextColumn Header="DESCRIÇÃO"/>
+                            <DataGridTextColumn Header="QUANTIDADE"/>
+                            <DataGridTextColumn Header="VALOR UNITÁRIO"/>
+                            <DataGridTextColumn Header="VALOR TOTAL"/>
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+                <TextBlock Text="TRANSPORTADOR" Margin="0 5 0 0"/>
+                <Grid Margin="0 14 0 0" Height="80" Width="840" HorizontalAlignment="Left" RenderTransformOrigin="0.494,0.425">
+                    <TextBlock Text="NOME/RAZÂO SOCIAL"/>
+                    <TextBox Height="15" Width="200" HorizontalAlignment="Left" Margin="0 -28 0 0" BorderThickness="1 1 1 1" BorderBrush="#2d2d2d2d"/>
+
+                    <TextBlock Text="PLACA DO VEÍCULO" Margin="220 0 0 0"/>
+                    <TextBox Height="15" Width="120" HorizontalAlignment="Left" Margin="220 -28 0 0" BorderThickness="1 1 1 1" BorderBrush="#2d2d2d2d"/>
+
+                    <TextBlock Text="FRETE" Margin="360 0 0 0"/>
+                    <CheckBox HorizontalAlignment="Center" Margin="-40 -32 0 0" BorderBrush="Black" BorderThickness="1 1 1 1" Foreground="Black" Background="Black">Emitente</CheckBox>
+                    <CheckBox HorizontalAlignment="Center" Margin=" 125 -32 0 0" BorderBrush="Black" BorderThickness="1 1 1 1" Foreground="Black" Background="Black">Terceiros</CheckBox>
+                    <CheckBox HorizontalAlignment="Center" Margin=" 360 -32 0 0" BorderBrush="Black" BorderThickness="1 1 1 1" Foreground="Black" Background="Black">Remetente/Destinatário</CheckBox>
+                </Grid>
+                <Button Width="76" Content="EMITIR" Margin="20 -100 60 10" HorizontalAlignment="Right" />
+
+                
             </StackPanel>
         </materialDesign:TransitioningContent>
     </Grid>

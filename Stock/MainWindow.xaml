@@ -27,12 +27,12 @@
                 <Button Uid="3" Width="150" Content="RECEBIMENTO" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Click="Button_Click"/>
                 <Button Uid="4" Width="150" Content="CADASTRAR" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Click="Button_Click"/>
                 <Button Uid="5" Width="150" Content="ESTOQUE" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Click="Button_Click"/>
-                <Button Uid="6" Width="150" Content="OUTROS" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Click="Button_Click"/>
+                <Button Uid="6" Width="150" Content="SOBRE" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Click="Button_Click"/>
             </StackPanel>
             <Grid x:Name="GridCursor" Width="150" Height="5" VerticalAlignment="Bottom" Background="#FF2196F3" HorizontalAlignment="Left"/>
 
         </Grid>
-        <Grid x:Name="GridMain" Height="520" Background="Aquamarine">
+        <Grid x:Name="GridMain" Height="520">
             
         </Grid>
     </StackPanel>
